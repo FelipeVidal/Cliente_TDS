@@ -5,6 +5,8 @@
  */
 package presentacion;
 
+import controlador.ControlGUI;
+
 /**
  *
  * @author Felipe
@@ -74,6 +76,11 @@ public class GUI_opcServer extends javax.swing.JFrame {
         jPanel1.add(txtPuertoServer, gridBagConstraints);
 
         btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -93,6 +100,19 @@ public class GUI_opcServer extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        
+        ControlGUI controlServer;
+        controlServer = new ControlGUI();
+        String puerto;
+        String ip;
+        
+        puerto = txtPuertoServer.getText();
+        ip = txtIpServer.getText();
+        
+        controlServer.conexionSever(ip, puerto);
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
      * @param args the command line arguments

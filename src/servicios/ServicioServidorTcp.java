@@ -14,12 +14,12 @@ import java.net.Socket;
  *
  * @author Felipe
  */
-public class servicioServidorTcpSecuencial {
-  public void conectServer(String ipServer, int PuertoServer){
+public class ServicioServidorTcp {
+  public void conectServer(String ipServer, int puertoServer){
               //Host del servidor
-        final String dirIpServidor = "127.0.0.1";
+        final String dirIpServidor = ipServer;
         //Puerto del servidor
-        final int PUERTO_SERVIDOR = 5000;
+        final int PUERTO_SERVIDOR = puertoServer;
         DataInputStream objFlujoDeEntrada;
         DataOutputStream objFlujoDeSalida;
  

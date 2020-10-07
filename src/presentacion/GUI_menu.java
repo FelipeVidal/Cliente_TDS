@@ -5,6 +5,8 @@
  */
 package presentacion;
 
+import controlador.ControlGUI;
+
 /**
  *
  * @author Felipe
@@ -44,6 +46,11 @@ public class GUI_menu extends javax.swing.JFrame {
         jPanel1.add(jLabel1, gridBagConstraints);
 
         btcConectServer.setText("Conectarse con el servidor");
+        btcConectServer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btcConectServerActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -76,6 +83,12 @@ public class GUI_menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btcConectServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btcConectServerActionPerformed
+        ControlGUI opcConect;
+        opcConect = new ControlGUI();
+        opcConect.ControlGUIServer();
+    }//GEN-LAST:event_btcConectServerActionPerformed
 
     /**
      * @param args the command line arguments

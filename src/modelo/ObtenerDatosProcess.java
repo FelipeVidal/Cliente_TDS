@@ -9,6 +9,6 @@ package modelo;
  *
  * @author Felipe
  */
-public class obtenerDatosProcess {
+public class ObtenerDatosProcess {
     
 }
